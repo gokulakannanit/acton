@@ -55,7 +55,12 @@
       <div class="banner_message">
         <p class="font_primary">Welcome to ACTON</p>
         <h1>Best IT Solutions and Services</h1>
-        <p>We are globally recognized leader in Business and Policy Advocacy for the SMEs of USA and India through the creation of an inclusive bilateral trade and commerce environment through Education, Training, Events and Public Affairs</p>
+        <p>
+          We are globally recognized leader in Business and Policy Advocacy for
+          the SMEs of USA and India through the creation of an inclusive
+          bilateral trade and commerce environment through Education, Training,
+          Events and Public Affairs
+        </p>
         <a href="#about" class="simple">Learn More</a>
       </div>
     </section>
@@ -114,7 +119,9 @@
     <section class="service">
       <section class="service_list container align_center">
         <h3 class="font_primary anim">Our Service</h3>
-        <h2 class="anim">We Provide Our Client Best <br />IT Solution Services</h2>
+        <h2 class="anim">
+          We Provide Our Client Best <br />IT Solution Services
+        </h2>
         <div class="flex_box" style="clear: both; margin: 50px 0">
           <div class="service_list_item">
             <img alt="" src="/public/images/icons/developer.svg" />
@@ -319,6 +326,13 @@
         <p class="small font_primary">Copyright © ACTON all rights reserved.</p>
       </div>
     </footer>
+    <div
+      class="scroll_button hide"
+      id="scroll_button"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="fa fa-angle-up"></i>
+    </div>
     <script type="text/javascript">
       let count = 0,
         bannerCount = 0,
@@ -342,6 +356,7 @@
       window.addEventListener("scroll", () => {
         const aboutEle = document.querySelectorAll(".about")[0];
         const serviceEle = document.querySelectorAll(".service")[0];
+        const scrollButton = document.getElementById("scroll_button");
         const isSeen = (el) =>
           el.getBoundingClientRect().bottom <= window.innerHeight;
         isSeen(aboutEle)
@@ -350,6 +365,11 @@
         isSeen(serviceEle)
           ? serviceEle.classList.add("animation")
           : serviceEle.classList.remove("animation");
+
+        scrollButton.classList.add("hide");
+        (document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50) &&
+          scrollButton.classList.remove("hide");
       });
     </script>
   </body>

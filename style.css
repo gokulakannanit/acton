@@ -129,6 +129,10 @@ table {
   color: #000;
 }
 
+.hide {
+  display: none;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -161,6 +165,26 @@ a.simple {
   background-color: transparent;
   padding: 10px;
   margin: 20px 10px 0;
+  cursor: pointer;
+}
+
+.scroll_button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 30px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #365e1e;
+  color: #efefef;
+  z-index: 10;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.scroll_button .fa {
+  font-size: 42px;
 }
 
 header .menu a {
