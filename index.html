@@ -116,8 +116,8 @@
     </section>
     <section class="service">
       <section class="service_list container align_center">
-        <h3 class="font_primary">Our Service</h3>
-        <h2>We Provide Our Client Best <br />IT Solution Services</h2>
+        <h3 class="font_primary anim">Our Service</h3>
+        <h2 class="anim">We Provide Our Client Best <br />IT Solution Services</h2>
         <div class="flex_box" style="clear: both; margin: 50px 0">
           <div class="service_list_item">
             <img src="/public/images/icons/developer.svg" />
@@ -203,7 +203,8 @@
       </div>
     </section>
     <section class="clients align_center">
-      <h3 class="font_primary">Meet Our Partners</h3>
+      <h3 class="font_primary">Our Clients</h3>
+      <h2>We Proud to Work With The Largest organisation</h2>
       <div class="container">
         <div class="horizontal-scrolling-items">
           <ul class="client_lists flex_box horizontal-scrolling-items__item">
@@ -318,7 +319,7 @@
         </div>
       </div>
       <div class="copyright">
-        <p class="small">Copyright © ACTON all rights reserved.</p>
+        <p class="small font_primary">Copyright © ACTON all rights reserved.</p>
       </div>
     </footer>
     <script type="text/javascript">
@@ -341,24 +342,17 @@
         setInterval(changeImage, 6000);
         changeImage();
       };
-      const isVisible = (ele, container) => {
-        container = container || document.body;
-        const { bottom, height, top } = ele.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
-
-        return top <= containerRect.top
-          ? containerRect.top - top <= height
-          : bottom - containerRect.bottom <= height;
-      };
-
       window.addEventListener("scroll", () => {
         const aboutEle = document.querySelectorAll(".about")[0];
-        const isSeen = el => el.getBoundingClientRect().bottom <= window.innerHeight
-        const isAboutEleVisible = isSeen(aboutEle);
-        console.log("isAboutEleVisible", isAboutEleVisible);
-        isAboutEleVisible
+        const serviceEle = document.querySelectorAll(".service")[0];
+        const isSeen = (el) =>
+          el.getBoundingClientRect().bottom <= window.innerHeight;
+        isSeen(aboutEle)
           ? aboutEle.classList.add("animation")
           : aboutEle.classList.remove("animation");
+        isSeen(serviceEle)
+          ? serviceEle.classList.add("animation")
+          : serviceEle.classList.remove("animation");
       });
     </script>
   </body>

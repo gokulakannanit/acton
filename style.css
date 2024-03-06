@@ -389,10 +389,10 @@ h1 {
   opacity: 1;
 }
 .about.animation .content h1 {
-  animation: moveFromRight 1s ease-in;
+  animation: moveFromRight 1s linear;
 }
 .about.animation .content p {
-  animation: moveFromRightFar 1s ease-in;
+  animation: moveFromRightFar 1s linear;
 }
 
 @keyframes moveFromRightFar {
@@ -417,6 +417,30 @@ h1 {
   }
   100% {
     right: 0px;
+    opacity: 1;
+  }
+}
+
+.service.animation .service_list_item {
+  animation: scaleUp 1s ease-out;
+}
+
+.service.animation h2.anim,
+.service.animation h3.anim {
+  position: relative;
+  animation: moveFromTop 1s ease;
+}
+
+@keyframes moveFromTop {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  60% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
     opacity: 1;
   }
 }
@@ -517,7 +541,7 @@ footer {
 }
 footer .copyright {
   text-align: center;
-  border-top: 1px solid #333;
+  background-color: #111;
   padding: 10px;
 }
 footer .footer_logo {
@@ -533,7 +557,10 @@ footer .footer_info {
   background-color: #efefef;
   padding: 20px 0;
   margin-top: 30px;
-  border-top: 1px solid #ccc;
+}
+
+.clients h2 {
+  margin-bottom: 50px;
 }
 
 .client_lists li img {
@@ -541,7 +568,7 @@ footer .footer_info {
   height: 100px;
   width: 200px;
   object-fit: contain;
-  margin:20px 30px;
+  margin: 20px 30px;
 }
 
 footer .footer_info ul {
@@ -587,10 +614,13 @@ footer .footer_info a.address span {
   font-size: 12px;
 }
 
-
 @keyframes infiniteScroll {
-  from {transform: translateX(0)}
-  to {transform: translateX(-50%)}
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .horizontal-scrolling-items {
