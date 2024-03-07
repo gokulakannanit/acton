@@ -510,10 +510,10 @@ h1 {
 }
 
 .numbers.animation > div.list {
-  animation: moveUpDown .5s linear;
+  animation: moveUpDown .8s linear;
 }
 .numbers.animation > div.list:nth-child(2) {
-  animation: moveUpDown .5s linear 0.1s;
+  animation: moveUpDown .8s linear 0.1s;
 }
 
 @keyframes moveUpDown {

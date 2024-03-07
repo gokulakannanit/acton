@@ -346,23 +346,7 @@
       let count = 0,
         bannerCount = 0,
         bannerImages;
-      window.onload = () => {
-        const ele = document.getElementsByClassName("banner_images")[0];
-        bannerImages = ele.getElementsByTagName("img");
-        bannerCount = bannerImages.length - 1;
-
-        const changeImage = () => {
-          count === bannerCount + 1 && (count = 0);
-          const prevCount = count === 0 ? bannerCount : count - 1;
-          bannerImages[prevCount]?.classList.remove("scale_anim");
-          bannerImages[count].classList.add("scale_anim");
-          count++;
-        };
-
-        setInterval(changeImage, 6000);
-        changeImage();
-      };
-      window.addEventListener("scroll", () => {
+      const onScroll = () => {
         const aboutEle = document.querySelectorAll(".about")[0];
         const serviceEle = document.querySelectorAll(".service")[0];
         const numbersEle = document.querySelectorAll(".numbers")[0];
@@ -383,7 +367,25 @@
         (document.body.scrollTop > 50 ||
           document.documentElement.scrollTop > 50) &&
           scrollButton.classList.remove("hide");
-      });
+      };
+      window.onload = () => {
+        const ele = document.getElementsByClassName("banner_images")[0];
+        bannerImages = ele.getElementsByTagName("img");
+        bannerCount = bannerImages.length - 1;
+
+        const changeImage = () => {
+          count === bannerCount + 1 && (count = 0);
+          const prevCount = count === 0 ? bannerCount : count - 1;
+          bannerImages[prevCount]?.classList.remove("scale_anim");
+          bannerImages[count].classList.add("scale_anim");
+          count++;
+        };
+
+        setInterval(changeImage, 6000);
+        changeImage();
+        window.addEventListener("scroll", onScroll);
+        setTimeout(onScroll, 10);
+      };
     </script>
   </body>
 </html>
