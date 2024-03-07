@@ -64,7 +64,7 @@
         <a href="#about" class="simple">Learn More</a>
       </div>
     </section>
-    <section class="numbers flex_box">
+    <section class="numbers flex_box animation">
       <div class="list flex_box">
         <img alt="" src="/public/images/icons/developer.svg" />
         <div>
@@ -365,6 +365,7 @@
       window.addEventListener("scroll", () => {
         const aboutEle = document.querySelectorAll(".about")[0];
         const serviceEle = document.querySelectorAll(".service")[0];
+        const numbersEle = document.querySelectorAll(".numbers")[0];
         const scrollButton = document.getElementById("scroll_button");
         const isSeen = (el) =>
           el.getBoundingClientRect().bottom <= window.innerHeight;
@@ -374,6 +375,9 @@
         isSeen(serviceEle)
           ? serviceEle.classList.add("animation")
           : serviceEle.classList.remove("animation");
+        isSeen(numbersEle)
+          ? numbersEle.classList.add("animation")
+          : numbersEle.classList.remove("animation");
 
         scrollButton.classList.add("hide");
         (document.body.scrollTop > 50 ||
