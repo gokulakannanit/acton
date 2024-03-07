@@ -189,10 +189,31 @@ a.simple {
 
 header .menu a {
   font-weight: bold;
+  padding-bottom: 10px;
 }
 
 header .menu a.selected {
   color: #66ae3e;
+  position: relative;
+}
+
+header .menu a.selected:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 4px solid #66ae3e;
+  animation: incWidth 0.5s ease-in-out;
+}
+
+@keyframes incWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .logo {
@@ -507,13 +528,14 @@ h1 {
   background-color: #fff;
   border-radius: 20px;
   align-items: center;
+  box-shadow: 0px 0px 40px 0px rgb(9 47 193 / 7%);
 }
 
 .numbers.animation > div.list {
-  animation: moveUpDown .8s linear;
+  animation: moveUpDown 0.5s linear;
 }
 .numbers.animation > div.list:nth-child(2) {
-  animation: moveUpDown .8s linear 0.1s;
+  animation: moveUpDown 0.7s linear;
 }
 
 @keyframes moveUpDown {
@@ -522,7 +544,7 @@ h1 {
     opacity: 0;
   }
   80% {
-    top: -20px;
+    top: -30px;
     opacity: 0.8;
   }
   100% {
@@ -539,7 +561,7 @@ h1 {
 }
 
 .numbers > div.list p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .numbers img {
