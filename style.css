@@ -199,18 +199,18 @@ a.simple {
   font-size: 42px;
 }
 
-header .menu a {
+.menu a {
   font-weight: bold;
   padding-bottom: 10px;
 }
 
-header .menu a.selected,
-header .menu a:hover {
+.menu a.selected,
+.menu a:hover {
   color: #66ae3e;
   position: relative;
 }
 
-header .menu a.selected::after {
+.menu a.selected::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -771,7 +771,8 @@ footer .footer_info a.address span {
   white-space: nowrap;
 }
 
-.contact_us, .about_us {
+.contact_us,
+.about_us {
   margin: 30px auto;
 }
 
@@ -988,7 +989,6 @@ button {
   text-align: center;
 }
 
-
 .about_page .content {
   max-width: 650px;
 }
@@ -1004,4 +1004,8 @@ button {
 .reason_flex {
   justify-content: flex-start;
   margin-bottom: 20px;
+}
+
+.portfolio {
+  margin: 40px 0;
 }
