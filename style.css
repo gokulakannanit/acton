@@ -770,14 +770,23 @@ footer .footer_info a.address span {
 
 .contact_us i.fa {
   font-size: 40px;
-  color: #66ae3e;
+  color: #fff;
 }
 
 .contact_us .contact_thumb {
   margin: 20px;
   padding: 20px;
   width: 250px;
-  border: 1px solid #ccc;
+  background-color: #66ae3e;
+  border-radius: 12px;
+}
+
+.contact_us .contact_thumb h2 {
+  color: #fff;
+}
+
+.contact_us .contact_thumb a {
+  color: #fff;
 }
 
 input[type="text"],
@@ -875,6 +884,7 @@ p.block {
 .career_list .list_item {
   background-color: #efefef;
   padding: 20px;
+  border-left: 2px solid #66ae3e;
 }
 
 .career_list .list_item:nth-child(even) {
@@ -884,6 +894,29 @@ p.block {
 .career_ext {
   background-color: #efefef;
   padding: 50px 20px;
+}
+
+.career_ext .container {
+  position: relative;
+  justify-content: flex-start;
+}
+
+.reach_us_image {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reach_us_image img {
+  position: absolute;
+  bottom: -82px;
+  right: 60px;
+  width: 300px;
+  z-index: 10;
+}
+
+button {
+  cursor: pointer;
 }
 
 .career_ext h2 {
@@ -897,6 +930,41 @@ p.block {
 
 .career_ext p {
   margin-top: 30px;
+}
+
+.reach_us {
+  text-align: center;
+  margin-left: 80px;
+}
+
+.reach_us i {
+  font-size: 30px;
+}
+.reach_us .text_middle {
+  margin: 20px;
+  font-size: 20px;
+  color: #222;
+}
+
+.reach_us h2 {
+  border: none;
+  padding-left: 0;
+}
+
+.reach_us button {
+  border: 2px solid #66ae3e;
+  color: #66ae3e;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.reach_us h2 a,
+.reach_us h2 a:visited,
+.reach_us h2 a:visited,
+.reach_us h2 a:active {
+  color: #66ae3e;
 }
 
 .career_list button {
