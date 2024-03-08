@@ -987,3 +987,21 @@ button {
   width: 100px;
   text-align: center;
 }
+
+
+.about_page .content {
+  max-width: 650px;
+}
+
+.about_page .about_right {
+  margin-top: 60px;
+}
+
+.about_page .about {
+  background-color: #efefef;
+}
+
+.reason_flex {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
