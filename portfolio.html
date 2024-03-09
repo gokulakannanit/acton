@@ -187,11 +187,12 @@
           <div class="footer_info">
             <h3 class="font_primary">Navigation</h3>
             <ul>
-              <li><a href="" class="address">About</a></li>
-              <li><a href="" class="address">Service</a></li>
-              <li><a href="" class="address">Careers</a></li>
-              <li><a href="" class="address">Contact</a></li>
-              <li><a href="" class="address">Our Team</a></li>
+              <li><a href="/" class="address">Home</a></li>              
+              <li><a href="service.html" class="address">Service</a></li>
+              <li><a href="portfolio.html" class="address">Portfolio</a></li>
+              <li><a href="career.html" class="address">Careers</a></li>
+              <li><a href="about.html" class="address">About</a></li>
+              <li><a href="career.html" class="address">Contact</a></li>
             </ul>
           </div>
           <div class="footer_info">
@@ -230,7 +231,7 @@
     </div>
     <script type="text/javascript">
       const elements = document.querySelectorAll(".list_tags .menu a");
-      console.log('elements', elements);
+      console.log("elements", elements);
       const listener = (e) => {
         console.log("here in ele click::::");
         e.stopImmediatePropagation();
@@ -239,6 +240,19 @@
         e.target.classList.add("selected");
       };
       elements.forEach((ele) => ele.addEventListener("click", listener));
+    </script>
+    <script type="text/javascript">
+      const onScroll = () => {
+        const scrollButton = document.getElementById("scroll_button");
+        scrollButton.classList.add("hide");
+        (document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50) &&
+          scrollButton.classList.remove("hide");
+      };
+      window.onload = () => {
+        window.addEventListener("scroll", onScroll);
+        setTimeout(onScroll, 10);
+      };
     </script>
   </body>
 </html>

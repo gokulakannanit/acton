@@ -152,50 +152,88 @@
       <div class="container align_center">
         <h3 class="font_primary">REASON TO CHOOSE US</h3>
         <h2>We provide truly prominent IT solutions.</h2>
-        <div class="flex_box" style="margin:60px 0;justify-content: space-around;">
-          <div style="width: 40%;">
+        <div
+          class="flex_box"
+          style="margin: 60px 0; justify-content: space-around"
+        >
+          <div style="width: 40%">
             <div class="flex_box reason_flex">
-              <p style="width: 70px;" class="font_primary"><i class="fa fa-check"></i></p>
+              <p style="width: 70px" class="font_primary">
+                <i class="fa fa-check"></i>
+              </p>
               <div class="align_left">
                 <h4 class="font_primary">Warranty Management IT</h4>
-                <p>Our service offerings enhance customer experience throughout secure & highly functional end-to-end warranty management.</p>
+                <p>
+                  Our service offerings enhance customer experience throughout
+                  secure & highly functional end-to-end warranty management.
+                </p>
               </div>
             </div>
             <div class="flex_box reason_flex">
-              <p style="width: 70px;" class="font_primary"><i class="fa fa-check"></i></p>
+              <p style="width: 70px" class="font_primary">
+                <i class="fa fa-check"></i>
+              </p>
               <div class="align_left">
                 <h4 class="font_primary">Quality Control System</h4>
-                <p>It's more than a responsibility but a guarantee from us to gain customer trust with highly reliable quality control system.</p>
+                <p>
+                  It's more than a responsibility but a guarantee from us to
+                  gain customer trust with highly reliable quality control
+                  system.
+                </p>
               </div>
             </div>
             <div class="flex_box reason_flex">
-              <p style="width: 70px;" class="font_primary"><i class="fa fa-check"></i></p>
+              <p style="width: 70px" class="font_primary">
+                <i class="fa fa-check"></i>
+              </p>
               <div class="align_left">
                 <h4 class="font_primary">Highly Professional Staffs</h4>
-                <p>Having obtained the official & formal training in IT technology and technical fields, our staffs know more than what they show.</p>
+                <p>
+                  Having obtained the official & formal training in IT
+                  technology and technical fields, our staffs know more than
+                  what they show.
+                </p>
               </div>
             </div>
           </div>
-          <div style="width: 40%;">
+          <div style="width: 40%">
             <div class="flex_box reason_flex">
-              <p style="width: 70px;" class="font_primary"><i class="fa fa-check"></i></p>
+              <p style="width: 70px" class="font_primary">
+                <i class="fa fa-check"></i>
+              </p>
               <div class="align_left">
                 <h4 class="font_primary">Product Engineering & Services</h4>
-                <p>Develop and propose product improvements through periodical and accurate testing, repairing & refining every version.</p>
+                <p>
+                  Develop and propose product improvements through periodical
+                  and accurate testing, repairing & refining every version.
+                </p>
               </div>
             </div>
             <div class="flex_box reason_flex">
-              <p style="width: 70px;" class="font_primary"><i class="fa fa-check"></i></p>
+              <p style="width: 70px" class="font_primary">
+                <i class="fa fa-check"></i>
+              </p>
               <div class="align_left">
-                <h4 class="font_primary">Infrastructure Integration Technology</h4>
-                <p>At ACTON, we have a holistic and integrated approach towards core modernization to experience technological evolution.</p>
+                <h4 class="font_primary">
+                  Infrastructure Integration Technology
+                </h4>
+                <p>
+                  At ACTON, we have a holistic and integrated approach towards
+                  core modernization to experience technological evolution.
+                </p>
               </div>
             </div>
             <div class="flex_box reason_flex">
-              <p style="width: 70px;" class="font_primary"><i class="fa fa-check"></i></p>
+              <p style="width: 70px" class="font_primary">
+                <i class="fa fa-check"></i>
+              </p>
               <div class="align_left">
                 <h4 class="font_primary">Information Security Management</h4>
-                <p>Information security has been a rising issue lately due to a series of scandals from big companies, rest assured, we're here.</p>
+                <p>
+                  Information security has been a rising issue lately due to a
+                  series of scandals from big companies, rest assured, we're
+                  here.
+                </p>
               </div>
             </div>
           </div>
@@ -287,11 +325,12 @@
           <div class="footer_info">
             <h3 class="font_primary">Navigation</h3>
             <ul>
-              <li><a href="" class="address">About</a></li>
-              <li><a href="" class="address">Service</a></li>
-              <li><a href="" class="address">Careers</a></li>
-              <li><a href="" class="address">Contact</a></li>
-              <li><a href="" class="address">Our Team</a></li>
+              <li><a href="/" class="address">Home</a></li>              
+              <li><a href="service.html" class="address">Service</a></li>
+              <li><a href="portfolio.html" class="address">Portfolio</a></li>
+              <li><a href="career.html" class="address">Careers</a></li>
+              <li><a href="about.html" class="address">About</a></li>
+              <li><a href="career.html" class="address">Contact</a></li>
             </ul>
           </div>
           <div class="footer_info">
@@ -328,5 +367,18 @@
     >
       <i class="fa fa-angle-up"></i>
     </div>
+    <script type="text/javascript">
+      const onScroll = () => {
+        const scrollButton = document.getElementById("scroll_button");
+        scrollButton.classList.add("hide");
+        (document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50) &&
+          scrollButton.classList.remove("hide");
+      };
+      window.onload = () => {
+        window.addEventListener("scroll", onScroll);
+        setTimeout(onScroll, 10);
+      };
+    </script>
   </body>
 </html>
