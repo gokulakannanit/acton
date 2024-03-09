@@ -148,7 +148,7 @@ a:link {
 
 .flex_box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .space_around {
@@ -157,6 +157,17 @@ a:link {
 
 .space_center {
   justify-content: center;
+}
+
+.space_even {
+  justify-content: space-evenly;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.space_start {
+  justify-content: start;
 }
 
 .align_right {
@@ -836,7 +847,7 @@ textarea {
 }
 
 p.block {
-  width: 470px;
+  width: 650px;
 }
 
 .contact button.send {
@@ -1007,5 +1018,21 @@ button {
 }
 
 .portfolio {
-  margin: 40px 0;
+  margin: 40px 0 0;
+}
+
+.portfolio_thumb {
+  width: calc(30% - 60px);
+  padding: 20px;
+  border:1px solid #ccc;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.portfolio_thumb img{
+  width: 100%;
+}
+
+.portfolio_thumb p {
+  margin:10px 0;
 }

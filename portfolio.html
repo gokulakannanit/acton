@@ -51,20 +51,109 @@
       </div>
       <div class="banner_message">
         <h2 class="font_primary">Our Case Studies</h2>
-        <p>Many of the world’s top brands have chosen ACTON to help them design and deliver innovative products. Here are just a few examples of our delighted customers.</p>
+        <p>
+          Many of the world’s top brands have chosen ACTON to help them design
+          and deliver innovative products. Here are just a few examples of our
+          delighted customers.
+        </p>
       </div>
     </section>
     <section class="portfolio">
       <div class="container align_center">
-        <h2>Proud projects that <span class="font_primary">make us stand out</span></h2>
+        <h3 class="font_primary">Our Case Studies</h3>
+        <h2>
+          Proud projects that
+          <span class="font_primary">make us stand out</span>
+        </h2>
         <section class="list_tags">
-          <ul class="menu flex_box" style="width: 900px;margin: 50px auto;">
+          <ul class="menu flex_box" style="width: 900px; margin: 50px auto">
             <li><a href="" class="selected">All</a></li>
             <li><a href="">Web Development</a></li>
             <li><a href="">Mobile Developement</a></li>
             <li><a href="">HOA Application</a></li>
           </ul>
         </section>
+      </div>
+    </section>
+    <section class="portfolio_list">
+      <div class="container flex_box space_center wrap">
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/1.jpg" />
+          <div>
+            <h3>Online butcher shop</h3>
+            <h4 class="font_primary">FarmFreshi</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/2.jpg" />
+          <div>
+            <h3>Online Grocery Shop</h3>
+            <h4 class="font_primary">FarmFreshi</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/3.jpg" />
+          <div>
+            <h3>Landscaping - commercial and residential</h3>
+            <h4 class="font_primary">Mowing Magician</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/2.jpg" />
+          <div>
+            <h3>Online Meet shop</h3>
+            <h4 class="font_primary">FarmFreshi</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/1.jpg" />
+          <div>
+            <h3>Online Meet shop</h3>
+            <h4 class="font_primary">FarmFreshi</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/2.jpg" />
+          <div>
+            <h3>Online Meet shop</h3>
+            <h4 class="font_primary">FarmFreshi</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
+        <div class="portfolio_thumb">
+          <img src="/public/images/portfolio/1.jpg" />
+          <div>
+            <h3>Online Meet shop</h3>
+            <h4 class="font_primary">FarmFreshi</h4>
+            <p>
+              The prospects for a company operating in this new market are
+              varied and exciting. The potential …
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <footer>
@@ -139,5 +228,17 @@
     >
       <i class="fa fa-angle-up"></i>
     </div>
+    <script type="text/javascript">
+      const elements = document.querySelectorAll(".list_tags .menu a");
+      console.log('elements', elements);
+      const listener = (e) => {
+        console.log("here in ele click::::");
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        elements.forEach((ele) => ele.classList.remove("selected"));
+        e.target.classList.add("selected");
+      };
+      elements.forEach((ele) => ele.addEventListener("click", listener));
+    </script>
   </body>
 </html>
