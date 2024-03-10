@@ -285,18 +285,31 @@ header.menu li {
 }
 
 .service_list_item {
-  width: 250px;
-  padding: 20px 20px 50px;
-  border: 1px solid #ddd;
+  width: calc(25% - 20px);
+  border-top: 4px solid #66ae3e;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
   border-radius: 12px;
-  background-color: #fff;
+  background-color: #222;
+  overflow: hidden;
+  color: #efefef;
 }
 
 .service_list_item img {
-  width: 50px;
-  margin: 20px 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
+
+.service_list_item p,
+.service_list_item h3 {
+  padding: 20px;
+  margin: 0px;
+}
+
+.service_list_item p {
+  padding: 0 20px 20px;
+}
+
 .service_list_item:nth-child(even) {
   margin-bottom: 30px;
 }
@@ -567,11 +580,11 @@ h1 {
 
 .numbers {
   justify-content: space-evenly;
-  width: 1000px;
+  width: 1280px;
   margin: 0 auto;
   position: relative;
-  top: -80px;
-  max-height: 180px;
+  top: -120px;
+  max-height: 200px;
   color: #222;
 }
 
@@ -1063,19 +1076,20 @@ button {
   left: -100px;
   border-radius: 12px;
   object-fit: cover;
+  border-top: 6px solid #66ae3e;
   border-bottom: 6px solid #66ae3e;
 }
 .service_item_content {
   position: relative;
   border-radius: 12px;
-  padding: 50px 20px 40px 300px;
+  padding: 40px 20px 40px 300px;
   background-color: #333;
   color: #efefef;
   width: 700px;
 }
 
 .service_item:nth-child(even) .service_item_content {
-  padding: 50px 250px 40px 50px;
+  padding: 40px 250px 40px 50px;
 }
 
 .service_item:nth-child(even) img {
