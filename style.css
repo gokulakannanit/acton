@@ -812,23 +812,16 @@ footer .footer_info a.address span {
 
 .contact_us i.fa {
   font-size: 40px;
-  color: #fff;
 }
 
 .contact_us .contact_thumb {
   margin: 20px;
   padding: 20px;
   width: 250px;
-  background-color: #66ae3e;
+  background-color: #efefef;
   border-radius: 12px;
-}
-
-.contact_us .contact_thumb h2 {
-  color: #fff;
-}
-
-.contact_us .contact_thumb a {
-  color: #fff;
+  border-top: 4px solid #66ae3e;
+  box-shadow: 0px 0px 40px 0px rgb(9 47 193 / 7%);
 }
 
 input[type="text"],
