@@ -1090,6 +1090,9 @@ button {
 
 .service_item:nth-child(even) .service_item_content {
   padding: 40px 250px 40px 50px;
+  background-color: #efefef;
+  color: #222;
+  border:1px solid #ccc;
 }
 
 .service_item:nth-child(even) img {
